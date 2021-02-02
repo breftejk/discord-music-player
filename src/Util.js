@@ -283,13 +283,13 @@ class Util {
      * @param {String} arrowIcon - Arrow Icon
      * @return {String} - Music Bar
      */
-    static buildBar(value, maxValue, size, loadedIcon, arrowIcon) {
+    static buildBar(value, maxValue, size, loadedIcon, arrowIcon, emptyIcon) {
         const percentage = value / maxValue;
         const progress = Math.round((size * percentage));
         const emptyProgress = size - progress;
 
         const progressText = loadedIcon.repeat(progress) + arrowIcon;
-        const emptyProgressText = ' '.repeat(emptyProgress);
+        const emptyProgressText = (emptyIcon || ' ').repeat(emptyProgress);
 
         return `[${progressText}${emptyProgressText}][${this.MillisecondsToTime(value)}/${this.MillisecondsToTime(maxValue)}]`;
     };
