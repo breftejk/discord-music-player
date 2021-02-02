@@ -281,6 +281,7 @@ class Util {
      * @param {Number} size - The bar size (in letters)
      * @param {String} loadedIcon - Loaded Icon
      * @param {String} arrowIcon - Arrow Icon
+     * @param {String} emptyIcon - Empty Icon
      * @return {String} - Music Bar
      */
     static buildBar(value, maxValue, size, loadedIcon, arrowIcon, emptyIcon) {
